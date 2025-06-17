@@ -187,7 +187,7 @@
                             <div class="rounded-bottom p-4">
                                 <a href="#" class="h4 d-inline-block mb-4"> Padre Abad</a>
                                 <p class="mb-4"> Lo más importante es que la gráfica muestra un pico crítico de deforestación en 2012 con más de 5,000 hectáreas perdidas, seguido de una disminución sostenida a partir de 2018, aunque la pérdida de bosque continúa, destacando la urgente necesidad de fortalecer acciones de conservación y manejo sostenible en Padre Abad.                                </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                                 <a href="#" class="h4 d-inline-block mb-4">Irazola</a>
                                 <p class="mb-4">ELo más importante es que la deforestación en el distrito alcanzó un pico entre 2011 y 2015 con pérdidas cercanas a las 4,500 hectáreas anuales, seguida de una disminución a partir de 2016, con mejoras notables en 2023, aunque la deforestación persiste, indicando la necesidad continua de control y manejo sostenible del bosque.
                                 </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -213,7 +213,7 @@
                                 <a href="#" class="h4 d-inline-block mb-4">Curimana</a>
                                 <p class="mb-4">La pérdida de bosque en Curimana se mantuvo baja hasta 2008, luego aumentó rápidamente, alcanzando un pico superior a 6,000 unidades alrededor de 2013, y aunque descendió después, sigue siendo un problema persistente con fluctuaciones entre 2,000 y 4,000 unidades hasta 2024.
                                 </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -226,7 +226,7 @@
                                 <a href="#" class="h4 d-inline-block mb-4">Neshuya</a>
                                 <p class="mb-4">La pérdida de bosque en Neshuya mostró picos cercanos a 2,500 unidades entre 2005 y 2010, pero desde 2011 la tendencia descendió, estabilizándose en alrededor de 500 unidades desde 2017 hasta 2024, reflejando una mejora sostenida y más marcada que en Curimana.
                                 </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -239,7 +239,7 @@
                                 <a href="#" class="h4 d-inline-block mb-4">Alexander von Humboldt</a>
                                 <p class="mb-4">La deforestación en Alexander von Humboldt alcanzó su pico superior a 500 unidades en 2005, con fluctuaciones entre 200 y 400 unidades hasta 2015, pero desde 2018 se estabilizó por debajo de 100 unidades, mostrando una disminución notable y niveles bajos y estables en los últimos años.
                                 </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -252,7 +252,7 @@
                                 <a href="#" class="h4 d-inline-block mb-4">Pérdida de Cobertura Vegetal por Distrito (2001 - 2023)</a>
                                 <p class="mb-4">La pérdida de cobertura vegetal varía entre los distritos: Padre Abad y Curimana alcanzaron picos de hasta 6,000 hectáreas alrededor de 2010-2015, seguidas de una disminución, mientras que Irazola mostró fluctuaciones con un máximo en 2010, y Neshuya y Alexander von Humboldt mantuvieron pérdidas estables por debajo de 2,000 hectáreas, con recuperaciones parciales en algunos distritos hacia 2023.
                                 </p>
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="#">Learn More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -300,18 +300,131 @@
 
 
         <!-- FAQs Start -->
-        <div class="container-fluid faq-section pb-5">
-            <div class="container pb-5 overflow-hidden">
-                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-                    <h1 class="display-5 mb-4">Mapa de cobertura vegetal distrito Padre abad</h1>
-                    <h4 class="text-primary">2015</h4>
-                          <img src="img/mapa de cobertura.jpg" class="img-fluid" style="width: 100%; max-width: 1000px;" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="container-fluid faq-section pb-5">
+  <div class="container pb-5 overflow-hidden">
+    <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+      <h1 class="display-5 mb-4">Mapa de cobertura vegetal distrito Padre abad</h1>
+      <h4 class="text-primary">2015</h4>
+      <div id="mapContainer" style="position: relative; display: block; overflow: hidden; width: 100%; max-width: 1000px; aspect-ratio: 5/3; margin: 0 auto; border: 2px solid #ddd; border-radius: 10px;">
+        <img src="img/mapa de cobertura.jpg" id="mapImage" class="img-fluid"
+          style="width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s cubic-bezier(.4,2,.6,1); cursor: grab; user-select: none;"
+          alt="Mapa de cobertura vegetal" draggable="false">
+        <!-- Botones de Zoom -->
+        <div style="position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 5px; z-index: 2;">
+          <button onclick="zoomIn()" style="width: 40px; height: 40px; background: rgba(0, 123, 255, 0.9); color: white; border: none; border-radius: 5px; font-size: 20px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">+</button>
+          <button onclick="zoomOut()" style="width: 40px; height: 40px; background: rgba(0, 123, 255, 0.9); color: white; border: none; border-radius: 5px; font-size: 20px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">−</button>
+          <button onclick="resetZoom()" style="width: 40px; height: 30px; background: rgba(108, 117, 125, 0.9); color: white; border: none; border-radius: 5px; font-size: 12px; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,0.3);">↻</button>
         </div>
-        <!-- FAQs End -->
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FAQs End -->
+
+<script>
+let currentZoom = 1;
+let currentX = 0;
+let currentY = 0;
+let isDragging = false;
+let startX = 0;
+let startY = 0;
+
+const minZoom = 1;
+const maxZoom = 3;
+const zoomStep = 0.2;
+
+function updateZoom() {
+  const image = document.getElementById('mapImage');
+  const container = document.getElementById('mapContainer');
+  const rect = container.getBoundingClientRect();
+
+  // Limitar el movimiento para que la imagen no se salga del contenedor
+  const imgWidth = rect.width * currentZoom;
+  const imgHeight = rect.height * currentZoom;
+  const maxX = Math.max(0, (imgWidth - rect.width) / 2);
+  const maxY = Math.max(0, (imgHeight - rect.height) / 2);
+
+  currentX = Math.max(-maxX, Math.min(maxX, currentX));
+  currentY = Math.max(-maxY, Math.min(maxY, currentY));
+
+  image.style.transform = `scale(${currentZoom}) translate(${currentX / currentZoom}px, ${currentY / currentZoom}px)`;
+  image.style.cursor = currentZoom > 1 ? (isDragging ? 'grabbing' : 'grab') : 'default';
+}
+
+function zoomIn() {
+  if (currentZoom < maxZoom) {
+    currentZoom = Math.min(maxZoom, currentZoom + zoomStep);
+    updateZoom();
+  }
+}
+
+function zoomOut() {
+  if (currentZoom > minZoom) {
+    currentZoom = Math.max(minZoom, currentZoom - zoomStep);
+    if (currentZoom === 1) {
+      currentX = 0;
+      currentY = 0;
+    }
+    updateZoom();
+  }
+}
+
+function resetZoom() {
+  currentZoom = 1;
+  currentX = 0;
+  currentY = 0;
+  updateZoom();
+}
+
+function startDrag(e) {
+  if (currentZoom <= 1) return;
+  isDragging = true;
+  startX = (e.touches ? e.touches[0].clientX : e.clientX) - currentX;
+  startY = (e.touches ? e.touches[0].clientY : e.clientY) - currentY;
+  document.body.style.userSelect = 'none';
+  updateZoom();
+}
+
+function drag(e) {
+  if (!isDragging || currentZoom <= 1) return;
+  currentX = (e.touches ? e.touches[0].clientX : e.clientX) - startX;
+  currentY = (e.touches ? e.touches[0].clientY : e.clientY) - startY;
+  updateZoom();
+}
+
+function endDrag() {
+  isDragging = false;
+  document.body.style.userSelect = '';
+  updateZoom();
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const image = document.getElementById('mapImage');
+  const container = document.getElementById('mapContainer');
+
+  // Mouse events
+  image.addEventListener('mousedown', startDrag);
+  window.addEventListener('mousemove', drag);
+  window.addEventListener('mouseup', endDrag);
+
+  // Touch events
+  image.addEventListener('touchstart', startDrag, { passive: false });
+  window.addEventListener('touchmove', drag, { passive: false });
+  window.addEventListener('touchend', endDrag);
+
+  // Wheel zoom
+  container.addEventListener('wheel', function (e) {
+    e.preventDefault();
+    if (e.deltaY < 0) {
+      zoomIn();
+    } else {
+      zoomOut();
+    }
+  });
+
+  updateZoom();
+});
+</script>
         <!-- Team Start -->
         <div class="container-fluid team pb-5">
             <div class="container pb-5">
