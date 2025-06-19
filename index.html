@@ -262,34 +262,71 @@
         <!-- Services End -->
 
        <!-- Blog Start -->
-<div class="container pb-5">
-    <div class="container-fluid blog pb-5">
-        <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
-            <h1 class="display-5 mb-4">Evolución de Cultivos y Deforestación en Padre Abad</h1>
-            <h4 class="text-primary">2005-2025</h4>
-            <p class="mb-0">Los gráficos muestran la evolución de cultivos y deforestación en Padre Abad, con aumentos en coca ilícita (2019-2023), fluctuaciones en varios cultivos (2005-2015), y tendencias a largo plazo (2001-2040).</p>
-        </div>
-        <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.2s">
-            <div class="blog-item p-4">
-                <div class="blog-img mb-4">
-                    <img src="img/proyecciones.jpg" class="img-fluid w-100 rounded" alt="">
-                </div>
-                <a href="#" class="h4 d-inline-block mb-3">Evolución de Hectáreas Cultivadas en Padre Abad (2001-2040)</a>
-                <p class="mb-4">
-                    El gráfico muestra la evolución de hectáreas cultivadas en Padre Abad, Irazola, Curimana, Neshuya y Alexander von Humboldt desde 2001 hasta 2040. Curimana destaca con un fuerte crecimiento hacia 2040, mientras que Padre Abad y Irazola muestran picos entre 2005 y 2015, y Neshuya y Alexander von Humboldt permanecen estables con tendencia a la baja.
-                </p>
+<body>
+       <div class="container pb-5">
+        <div class="container-fluid blog pb-5">
+            <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
+                <h1 class="display-5 mb-4">Evolución de Cultivos y Deforestación en Padre Abad</h1>
+                <h4 class="text-primary">2005-2025</h4>
+                <p class="mb-0">Evolución de Hectáreas Cultivadas en Padre Abad (2001-2040)</p>
             </div>
-            <div class="blog-item p-4">
-            <div class="blog-item p-4">
-                <div class="blog-img mb-4">
-                    <img src="img/coca.jpg" class="img-fluid w-100 rounded" alt="">
+            
+            <div class="owl-carousel blog-carousel wow fadeInUp" data-wow-delay="0.2s">
+                <div class="blog-item p-4">
+                    <div class="blog-img mb-4">
+                        <img src="img/proyecciones.jpg" class="img-fluid w-100 rounded" alt="Proyecciones de cultivos">
+                    </div>
+                    <a href="#" class="h4 d-inline-block mb-3">Evolución de Hectáreas Cultivadas en Padre Abad (2001-2040)</a>
+                    <p class="mb-4">
+                        El gráfico muestra la evolución de hectáreas cultivadas en Padre Abad, Irazola, Curimana, Neshuya y Alexander von Humboldt desde 2001 hasta 2040. Curimana destaca con un fuerte crecimiento hacia 2040, mientras que Padre Abad y Irazola muestran picos entre 2005 y 2015, y Neshuya y Alexander von Humboldt permanecen estables con tendencia a la baja.
+                    </p>
                 </div>
-                <a href="#" class="h4 d-inline-block mb-3">Evolución de Cultivos de Coca y Deforestación por Narcopistas en Padre Abad (2019-2023)</a>
-                <p class="mb-4">El gráfico muestra un aumento constante de hectáreas de coca ilícita de 600 en 2019 a 1400 en 2023, junto con una deforestación inicial por narcopistas en 2020 que se mantiene baja en comparación.</p>
+                
+                <div class="blog-item p-4">
+                    <div class="blog-img mb-4">
+                        <img src="img/coca.jpg" class="img-fluid w-100 rounded" alt="Cultivos de coca">
+                    </div>
+                    <a href="#" class="h4 d-inline-block mb-3">Evolución de Cultivos de Coca y Deforestación por Narcopistas en Padre Abad (2019-2023)</a>
+                    <p class="mb-4">El gráfico muestra un aumento constante de hectáreas de coca ilícita de 600 en 2019 a 1400 en 2023, junto con una deforestación inicial por narcopistas en 2020 que se mantiene baja en comparación.</p>    
+                    </p>
+                </div>
+                
+                <div class="blog-item p-4">
+                    <div class="blog-img mb-4">
+                        <img src="img/alimento.jpg" class="img-fluid w-100 rounded" alt="Evolución de cultivos">
+                    </div>
+                    <a href="#" class="h4 d-inline-block mb-3">Evolución de hectáreas cultivadas (2005-2015)</a>
+                    <p class="mb-4">
+                      Entre 2005 y 2015, la agricultura en la Amazonía cambió el uso del suelo, impulsada por cultivos como la papaya y prácticas como la agricultura migratoria y los monocultivos. Estas actividades provocaron deforestación, degradación del suelo y pérdida de biodiversidad, siendo las principales responsables de la reducción de la cobertura boscosa.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.blog-carousel').owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 0,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                navText: ['‹', '›'],
+                center: true,
+                stagePadding: 0
+            });
+
+            // Animate on scroll
+            $('.wow').addClass('animate__animated animate__fadeInUp');
+        });
+    </script>
 <!-- Blog End -->
 
 
@@ -489,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="col-md-6 col-lg-6 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
                         <div class="team-item">
                             <div class="team-img">
-                                <img src="img/favian.jpg" class="img-fluid" alt="">
+                                <img src="img/favian16.jpg" class="img-fluid" alt="">
                             </div>
                             <div class="team-title">
                                 <h4 class="mb-0">Edwin Poma</h4>
